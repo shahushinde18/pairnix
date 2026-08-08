@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b10hyv4uwtyfb"]
+
+[ext_resource type="Script" uid="uid://2dmk8svfnj88" path="res://Scripts/Splash.gd" id="1_qowkc"]
+[ext_resource type="Texture2D" uid="uid://bm3g4vhhqg8wf" path="res://Assets/Images/Backgrounds/pairnix_splash.png" id="1_xot6a"]
+
+[node name="Splash" type="Control" unique_id=854032135]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qowkc")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=209910552]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xot6a")
+expand_mode = 1
+stretch_mode = 6
