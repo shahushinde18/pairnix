@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cf8c77n7bpahd"]
+
+[ext_resource type="Script" uid="uid://bumdoavkj6554" path="res://Scripts/Card.gd" id="1_b1q5o"]
+[ext_resource type="Texture2D" uid="uid://c0ipvoc263pls" path="res://Assets/Images/Cards/pairnix_card_back.png" id="2_ntgjb"]
+
+[node name="Card" type="Control" unique_id=987512395]
+custom_minimum_size = Vector2(180, 240)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b1q5o")
+
+[node name="CardPanel" type="Panel" parent="." unique_id=1265580742]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CardBack" type="TextureRect" parent="CardPanel" unique_id=1973687101]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ntgjb")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CardFront" type="TextureRect" parent="CardPanel" unique_id=656355659]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CardButton" type="Button" parent="." unique_id=584708874]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
