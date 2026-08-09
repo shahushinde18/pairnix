@@ -13,6 +13,8 @@ const CARD_TEXTURES := [
 ]
 
 @onready var card_grid: GridContainer = $CardGrid
+@onready var pairs_label: Label = $PairsLabel
+@onready var moves_label: Label = $MovesLabel
 
 var cards: Array[Control] = []
 
@@ -20,12 +22,21 @@ var first_card: Control = null
 var second_card: Control = null
 
 var input_locked := false
-
+var moves := 0
+var matched_pairs := 0
 
 func _ready() -> void:
+	update_labels()
 	create_cards()
 
+func update_labels() -> void:
+	pairs_label.text = "Pairs: %d / %d" % [matched_pairs, TOTAL_PAIRS]
+	moves_label.text = "Moves: %d" % moves
 
+func game_completed() -> void:
+	print("PAIRNIX COMPLETE!")
+	print("Moves: ", moves)
+		
 func create_cards() -> void:
 	var card_ids: Array[int] = []
 
@@ -60,6 +71,10 @@ func _on_card_pressed(card: Control) -> void:
 		return
 
 	second_card = card
+
+	moves += 1
+	update_labels()
+
 	input_locked = true
 
 	await get_tree().create_timer(0.8).timeout
@@ -67,7 +82,14 @@ func _on_card_pressed(card: Control) -> void:
 	if first_card.card_id == second_card.card_id:
 		first_card.set_matched()
 		second_card.set_matched()
+
+		matched_pairs += 1
+		update_labels()
+
+		if matched_pairs == TOTAL_PAIRS:
+			game_completed()
 	else:
+		print("NO MATCH - hiding cards")
 		first_card.hide_card()
 		second_card.hide_card()
 
