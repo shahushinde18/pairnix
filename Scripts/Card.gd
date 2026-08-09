@@ -14,6 +14,7 @@ var card_id := -1
 func _ready() -> void:
 	card_back.visible = true
 	card_front.visible = false
+	card_button.disabled = false
 	card_button.pressed.connect(_on_card_pressed)
 
 
