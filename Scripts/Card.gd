@@ -34,6 +34,9 @@ func _on_card_pressed() -> void:
 
 
 func hide_card() -> void:
+	if is_matched:
+		return
+
 	is_revealed = false
 	card_back.visible = true
 	card_front.visible = false
@@ -41,3 +44,9 @@ func hide_card() -> void:
 
 func set_matched() -> void:
 	is_matched = true
+	is_revealed = true
+
+	card_back.visible = false
+	card_front.visible = true
+
+	card_button.disabled = true
