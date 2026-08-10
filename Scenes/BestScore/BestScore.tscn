@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://ce23n2vkwojj8"]
+
+[ext_resource type="Script" uid="uid://cuhqe0qbqvncg" path="res://Scripts/BestScore.gd" id="1_gcg16"]
+
+[node name="BestScore" type="Control" unique_id=1032419023]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gcg16")
+
+[node name="Background" type="ColorRect" parent="." unique_id=405372076]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.28510448, 0.40252027, 0.30088264, 1)
+
+[node name="ScoreContainer" type="VBoxContainer" parent="." unique_id=1175195549]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 85.0
+
+[node name="Title" type="Label" parent="ScoreContainer" unique_id=197916958]
+layout_mode = 2
+text = "BEST SCORE"
+
+[node name="BestScoreLabel" type="Label" parent="ScoreContainer" unique_id=1342276369]
+layout_mode = 2
+text = "Best Moves: --"
+
+[node name="BackButton" type="Button" parent="ScoreContainer" unique_id=1546879582]
+layout_mode = 2
+text = "BACK"
+
+[connection signal="pressed" from="ScoreContainer/BackButton" to="." method="_on_back_button_pressed"]

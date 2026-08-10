@@ -162,7 +162,9 @@ func game_completed() -> void:
 
 	input_locked = true
 	set_cards_enabled(false)
-
+	
+	SaveManager.save_best_score(moves)
+	
 	print("PAIRNIX COMPLETE!")
 	print("Moves: ", moves)
 	print("Time: ", time_label.text)
@@ -181,6 +183,7 @@ func _on_play_again_pressed() -> void:
 
 func _on_main_menu_pressed() -> void:
 	print("MAIN MENU BUTTON PRESSED")
+	get_tree().change_scene_to_file("res://Scenes/MainMenu/MainMenu.tscn")
 
 
 func _on_game_timer_timeout() -> void:

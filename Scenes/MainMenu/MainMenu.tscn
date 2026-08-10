@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://0xwraoxid6s1"]
 
+[ext_resource type="Script" uid="uid://c3q5v7laukk15" path="res://Scripts/MainMenu.gd" id="1_cdkru"]
+
 [node name="MainMenu" type="Control" unique_id=563067850]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_cdkru")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1212222556]
 layout_mode = 1
