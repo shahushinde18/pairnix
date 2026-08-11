@@ -5,6 +5,7 @@ signal card_pressed(card)
 @onready var card_back: TextureRect = $CardPanel/CardBack
 @onready var card_front: TextureRect = $CardPanel/CardFront
 @onready var card_button: Button = $CardButton
+@onready var card_flip_sound: AudioStreamPlayer = $CardFlipSound
 
 var is_revealed := false
 var is_matched := false
@@ -26,6 +27,8 @@ func setup_card(id: int, front_texture: Texture2D) -> void:
 func _on_card_pressed() -> void:
 	if is_revealed or is_matched:
 		return
+
+	card_flip_sound.play()
 
 	is_revealed = true
 	card_back.visible = false

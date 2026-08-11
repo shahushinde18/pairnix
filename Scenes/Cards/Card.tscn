@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bumdoavkj6554" path="res://Scripts/Card.gd" id="1_b1q5o"]
 [ext_resource type="Texture2D" uid="uid://c0ipvoc263pls" path="res://Assets/Images/Cards/pairnix_card_back.png" id="2_ntgjb"]
 [ext_resource type="Texture2D" uid="uid://dv87ud16pi3lp" path="res://Assets/Images/Cards/lion.png" id="3_58ae4"]
+[ext_resource type="AudioStream" uid="uid://bmomi4obsbuad" path="res://Assets/Audio/card_flip.mp3" id="4_rd7hj"]
 
 [node name="Card" type="Control" unique_id=987512395]
 custom_minimum_size = Vector2(180, 240)
@@ -52,3 +53,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="CardFlipSound" type="AudioStreamPlayer" parent="." unique_id=1943447477]
+stream = ExtResource("4_rd7hj")

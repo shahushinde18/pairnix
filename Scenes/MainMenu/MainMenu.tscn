@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://0xwraoxid6s1"]
 
 [ext_resource type="Script" uid="uid://c3q5v7laukk15" path="res://Scripts/MainMenu.gd" id="1_cdkru"]
+[ext_resource type="AudioStream" uid="uid://died5acmah43i" path="res://Assets/Audio/button_click.mp3" id="2_c7oo3"]
 
 [node name="MainMenu" type="Control" unique_id=563067850]
 layout_mode = 3
@@ -59,3 +60,6 @@ text = "BEST SCORE"
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 text = "SETTINGS"
+
+[node name="ButtonClickSound" type="AudioStreamPlayer" parent="." unique_id=1143778338]
+stream = ExtResource("2_c7oo3")

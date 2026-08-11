@@ -40,3 +40,26 @@ func get_best_score() -> int:
 
 func _on_back_button_pressed() -> void:
 	pass # Replace with function body.
+
+func save_sound_enabled(enabled: bool) -> void:
+	var config := ConfigFile.new()
+
+	config.load(SAVE_PATH)
+
+	config.set_value("settings", "sound_enabled", enabled)
+
+	var error := config.save(SAVE_PATH)
+
+	if error == OK:
+		print("SAVE MANAGER - Sound setting saved: ", enabled)
+	else:
+		print("SAVE MANAGER - ERROR saving sound setting: ", error)
+
+
+func get_sound_enabled() -> bool:
+	var config := ConfigFile.new()
+
+	if config.load(SAVE_PATH) == OK:
+		return bool(config.get_value("settings", "sound_enabled", true))
+
+	return true

@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://dse3unswqlhse"]
 
 [ext_resource type="Script" uid="uid://gw0pwpd2rm5" path="res://Scripts/Game.gd" id="1_rdw05"]
+[ext_resource type="AudioStream" uid="uid://died5acmah43i" path="res://Assets/Audio/button_click.mp3" id="2_gwu2e"]
+[ext_resource type="AudioStream" uid="uid://jikdg0c85pcr" path="res://Assets/Audio/match_success.mp3" id="3_xbxml"]
+[ext_resource type="AudioStream" uid="uid://cjmyx7tyenkxi" path="res://Assets/Audio/wrong_match.mp3" id="4_ln2h6"]
+[ext_resource type="AudioStream" uid="uid://cq6oqerywpn" path="res://Assets/Audio/game_complete.mp3" id="5_y3kpf"]
 
 [node name="Game" type="Control" unique_id=1112700141]
 layout_mode = 3
@@ -93,3 +97,15 @@ offset_right = 656.0
 offset_bottom = 85.0
 theme_override_font_sizes/font_size = 32
 text = "Time: 00"
+
+[node name="ButtonClickSound" type="AudioStreamPlayer" parent="." unique_id=467281981]
+stream = ExtResource("2_gwu2e")
+
+[node name="MatchSuccessSound" type="AudioStreamPlayer" parent="." unique_id=2108631396]
+stream = ExtResource("3_xbxml")
+
+[node name="WrongMatchSound" type="AudioStreamPlayer" parent="." unique_id=603127107]
+stream = ExtResource("4_ln2h6")
+
+[node name="GameCompleteSound" type="AudioStreamPlayer" parent="." unique_id=561055710]
+stream = ExtResource("5_y3kpf")

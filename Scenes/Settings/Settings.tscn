@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://b55ej3frym30u"]
+
+[ext_resource type="Script" uid="uid://x0gwdsx0jvtb" path="res://Scripts/Settings.gd" id="1_10mxt"]
+[ext_resource type="AudioStream" uid="uid://died5acmah43i" path="res://Assets/Audio/button_click.mp3" id="2_xlpa8"]
+
+[node name="Settings" type="Control" unique_id=58250869]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_10mxt")
+
+[node name="Background" type="ColorRect" parent="." unique_id=443528955]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08235294, 0.19607843, 0.06666667, 1)
+
+[node name="SettingsContainer" type="VBoxContainer" parent="." unique_id=1437990539]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="SettingsContainer" unique_id=632721124]
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="SoundLabel" type="Label" parent="SettingsContainer" unique_id=1550270353]
+layout_mode = 2
+text = "Sound"
+
+[node name="SoundCheckButton" type="Button" parent="SettingsContainer" unique_id=1695306699]
+layout_mode = 2
+text = "ON"
+
+[node name="BackButton" type="Button" parent="SettingsContainer" unique_id=1583808656]
+layout_mode = 2
+text = "BACK"
+
+[node name="ButtonClickSound" type="AudioStreamPlayer" parent="." unique_id=1923415921]
+stream = ExtResource("2_xlpa8")

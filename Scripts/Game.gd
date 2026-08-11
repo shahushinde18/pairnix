@@ -22,6 +22,10 @@ const CARD_TEXTURES := [
 @onready var completion_result: Label = $CompletionPanel/CompletionBox/CompletionResult
 @onready var play_again_button: Button = $CompletionPanel/CompletionBox/PlayAgainButton
 @onready var main_menu_button: Button = $CompletionPanel/CompletionBox/MainMenuButton
+@onready var button_click_sound: AudioStreamPlayer = $ButtonClickSound
+@onready var match_success_sound: AudioStreamPlayer = $MatchSuccessSound
+@onready var wrong_match_sound: AudioStreamPlayer = $WrongMatchSound
+@onready var game_complete_sound: AudioStreamPlayer = $GameCompleteSound
 
 var cards: Array[Control] = []
 
@@ -125,7 +129,9 @@ func _on_card_pressed(card: Control) -> void:
 	# MATCH
 	if card_a.card_id == card_b.card_id:
 		print("MATCH FOUND - Pair ID: ", card_a.card_id)
-
+		
+		match_success_sound.play()
+		
 		card_a.set_matched()
 		card_b.set_matched()
 
@@ -144,10 +150,12 @@ func _on_card_pressed(card: Control) -> void:
 	# NO MATCH
 	else:
 		print("NO MATCH - Pair IDs: ", card_a.card_id, " and ", card_b.card_id)
-
+		
 		# Keep both cards visible for 0.8 seconds.
 		await get_tree().create_timer(0.8).timeout
 
+		wrong_match_sound.play()
+		
 		# Hide ONLY the two cards that were compared.
 		card_a.hide_card()
 		card_b.hide_card()
@@ -159,7 +167,7 @@ func _on_card_pressed(card: Control) -> void:
 
 func game_completed() -> void:
 	game_timer.stop()
-
+	game_complete_sound.play()
 	input_locked = true
 	set_cards_enabled(false)
 	
@@ -178,13 +186,23 @@ func game_completed() -> void:
 
 
 func _on_play_again_pressed() -> void:
+	button_click_sound.play()
+
+	await get_tree().create_timer(0.15).timeout
+
 	get_tree().reload_current_scene()
 
 
 func _on_main_menu_pressed() -> void:
-	print("MAIN MENU BUTTON PRESSED")
-	get_tree().change_scene_to_file("res://Scenes/MainMenu/MainMenu.tscn")
+	button_click_sound.play()
 
+	print("MAIN MENU BUTTON PRESSED")
+
+	await get_tree().create_timer(0.15).timeout
+
+	get_tree().change_scene_to_file(
+		"res://Scenes/MainMenu/MainMenu.tscn"
+	)
 
 func _on_game_timer_timeout() -> void:
 	elapsed_time += 1
