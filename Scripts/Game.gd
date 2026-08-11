@@ -26,6 +26,7 @@ const CARD_TEXTURES := [
 @onready var match_success_sound: AudioStreamPlayer = $MatchSuccessSound
 @onready var wrong_match_sound: AudioStreamPlayer = $WrongMatchSound
 @onready var game_complete_sound: AudioStreamPlayer = $GameCompleteSound
+@onready var best_score_result: Label = $CompletionPanel/CompletionBox/BestScoreResult
 
 var cards: Array[Control] = []
 
@@ -53,7 +54,7 @@ func _ready() -> void:
 
 
 func update_labels() -> void:
-	pairs_label.text = "Pairs: %d / %d" % [matched_pairs, TOTAL_PAIRS]
+	pairs_label.text = "Pairs: %d/%d" % [matched_pairs, TOTAL_PAIRS]
 	moves_label.text = "Moves: %d" % moves
 
 
@@ -167,12 +168,17 @@ func _on_card_pressed(card: Control) -> void:
 
 func game_completed() -> void:
 	game_timer.stop()
+
 	game_complete_sound.play()
+
 	input_locked = true
 	set_cards_enabled(false)
-	
+
+	var previous_best := SaveManager.get_best_score()
+	var is_new_best := previous_best == 0 or moves < previous_best
+
 	SaveManager.save_best_score(moves)
-	
+
 	print("PAIRNIX COMPLETE!")
 	print("Moves: ", moves)
 	print("Time: ", time_label.text)
@@ -181,6 +187,11 @@ func game_completed() -> void:
 		moves,
 		time_label.text
 	]
+
+	if is_new_best:
+		best_score_result.text = "NEW BEST SCORE!"
+	else:
+		best_score_result.text = "Best Moves: %d" % SaveManager.get_best_score()
 
 	completion_panel.visible = true
 

@@ -2,6 +2,48 @@
 
 [ext_resource type="Script" uid="uid://c3q5v7laukk15" path="res://Scripts/MainMenu.gd" id="1_cdkru"]
 [ext_resource type="AudioStream" uid="uid://died5acmah43i" path="res://Assets/Audio/button_click.mp3" id="2_c7oo3"]
+[ext_resource type="Texture2D" uid="uid://bmpp5q1c8vtkw" path="res://Assets/Images/Backgrounds/main_menu_background.png" id="2_kpx3y"]
+[ext_resource type="FontFile" uid="uid://hx6nmxcfrndn" path="res://Assets/Font/Montserrat-ExtraBold.ttf" id="2_sg7ab"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpx3y"]
+content_margin_left = 20.0
+content_margin_top = 12.0
+content_margin_right = 20.0
+content_margin_bottom = 12.0
+bg_color = Color(0.14117648, 0.08235294, 0.30980393, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8392157, 0.65882355, 0.30980393, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vapy7"]
+bg_color = Color(0.09019608, 0.050980393, 0.21176471, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7882353, 0.58431375, 0.20784314, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ua038"]
+bg_color = Color(0.23137255, 0.14117648, 0.45882353, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9411765, 0.78039217, 0.36862746, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [node name="MainMenu" type="Control" unique_id=563067850]
 layout_mode = 3
@@ -12,14 +54,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cdkru")
 
-[node name="Background" type="ColorRect" parent="." unique_id=1212222556]
+[node name="Background" type="TextureRect" parent="." unique_id=857041739]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.08235294, 0.19607843, 0.06666667, 1)
+mouse_filter = 2
+texture = ExtResource("2_kpx3y")
+stretch_mode = 6
 
 [node name="MenuContainer" type="VBoxContainer" parent="." unique_id=1370895589]
 layout_mode = 1
@@ -32,33 +76,65 @@ theme_override_constants/separation = 24
 
 [node name="Title" type="Label" parent="MenuContainer" unique_id=1494232218]
 layout_mode = 2
-theme_override_font_sizes/font_size = 48
+theme_override_colors/font_color = Color(0.9647059, 0.84313726, 0.47843137, 1)
+theme_override_colors/font_outline_color = Color(0.08627451, 0.043137256, 0.19607843, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_sg7ab")
+theme_override_font_sizes/font_size = 42
 text = "PAIRNIX"
 horizontal_alignment = 1
 
 [node name="Subtitle" type="Label" parent="MenuContainer" unique_id=952597454]
 layout_mode = 2
-theme_override_font_sizes/font_size = 22
+theme_override_colors/font_color = Color(0.9098039, 0.8745098, 0.9607843, 1)
+theme_override_colors/font_outline_color = Color(0.08627451, 0.043137256, 0.19607843, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_sg7ab")
+theme_override_font_sizes/font_size = 20
 text = "Memory Match"
 horizontal_alignment = 1
 
 [node name="ButtonsContainer" type="VBoxContainer" parent="MenuContainer" unique_id=1022828698]
 layout_mode = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 18
 
 [node name="PlayButton" type="Button" parent="MenuContainer/ButtonsContainer" unique_id=1893560448]
-custom_minimum_size = Vector2(0, 64)
+custom_minimum_size = Vector2(320, 70)
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_fonts/font = ExtResource("2_sg7ab")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_kpx3y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vapy7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ua038")
 text = "PLAY"
 
 [node name="BestScoreButton" type="Button" parent="MenuContainer/ButtonsContainer" unique_id=1176568855]
-custom_minimum_size = Vector2(0, 64)
+custom_minimum_size = Vector2(320, 70)
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_fonts/font = ExtResource("2_sg7ab")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_kpx3y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vapy7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ua038")
 text = "BEST SCORE"
 
 [node name="SettingsButton" type="Button" parent="MenuContainer/ButtonsContainer" unique_id=737396398]
-custom_minimum_size = Vector2(0, 64)
+custom_minimum_size = Vector2(320, 70)
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_fonts/font = ExtResource("2_sg7ab")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_kpx3y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vapy7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ua038")
 text = "SETTINGS"
 
 [node name="ButtonClickSound" type="AudioStreamPlayer" parent="." unique_id=1143778338]

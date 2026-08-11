@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b55ej3frym30u"]
 
 [ext_resource type="Script" uid="uid://x0gwdsx0jvtb" path="res://Scripts/Settings.gd" id="1_10mxt"]
+[ext_resource type="FontFile" uid="uid://hx6nmxcfrndn" path="res://Assets/Font/Montserrat-ExtraBold.ttf" id="2_swut7"]
 [ext_resource type="AudioStream" uid="uid://died5acmah43i" path="res://Assets/Audio/button_click.mp3" id="2_xlpa8"]
 
 [node name="Settings" type="Control" unique_id=58250869]
@@ -37,18 +38,22 @@ grow_vertical = 2
 
 [node name="Title" type="Label" parent="SettingsContainer" unique_id=632721124]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_swut7")
 text = "SETTINGS"
 
 [node name="SoundLabel" type="Label" parent="SettingsContainer" unique_id=1550270353]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_swut7")
 text = "Sound"
 
 [node name="SoundCheckButton" type="Button" parent="SettingsContainer" unique_id=1695306699]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_swut7")
 text = "ON"
 
 [node name="BackButton" type="Button" parent="SettingsContainer" unique_id=1583808656]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_swut7")
 text = "BACK"
 
 [node name="ButtonClickSound" type="AudioStreamPlayer" parent="." unique_id=1923415921]

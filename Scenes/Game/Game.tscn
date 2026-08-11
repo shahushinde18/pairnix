@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dse3unswqlhse"]
 
 [ext_resource type="Script" uid="uid://gw0pwpd2rm5" path="res://Scripts/Game.gd" id="1_rdw05"]
+[ext_resource type="FontFile" uid="uid://hx6nmxcfrndn" path="res://Assets/Font/Montserrat-ExtraBold.ttf" id="2_3k6gv"]
 [ext_resource type="AudioStream" uid="uid://died5acmah43i" path="res://Assets/Audio/button_click.mp3" id="2_gwu2e"]
 [ext_resource type="AudioStream" uid="uid://jikdg0c85pcr" path="res://Assets/Audio/match_success.mp3" id="3_xbxml"]
 [ext_resource type="AudioStream" uid="uid://cjmyx7tyenkxi" path="res://Assets/Audio/wrong_match.mp3" id="4_ln2h6"]
@@ -28,6 +29,7 @@ offset_left = 30.0
 offset_top = 40.0
 offset_right = 110.0
 offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("2_3k6gv")
 theme_override_font_sizes/font_size = 32
 text = "Pairs: 0 / 6"
 
@@ -37,6 +39,7 @@ offset_left = 280.0
 offset_top = 40.0
 offset_right = 416.0
 offset_bottom = 85.0
+theme_override_fonts/font = ExtResource("2_3k6gv")
 theme_override_font_sizes/font_size = 32
 text = "Moves: 0"
 
@@ -65,11 +68,13 @@ grow_vertical = 2
 
 [node name="CompletionTitle" type="Label" parent="CompletionPanel/CompletionBox" unique_id=2115317724]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3k6gv")
 text = "WELL DONE!"
 horizontal_alignment = 1
 
 [node name="CompletionResult" type="Label" parent="CompletionPanel/CompletionBox" unique_id=197187070]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3k6gv")
 text = "All 6 pairs matched!"
 horizontal_alignment = 1
 
@@ -80,12 +85,20 @@ layout_mode = 2
 [node name="PlayAgainButton" type="Button" parent="CompletionPanel/CompletionBox" unique_id=462037652]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3k6gv")
 text = "PLAY AGAIN"
 
 [node name="MainMenuButton" type="Button" parent="CompletionPanel/CompletionBox" unique_id=15394914]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3k6gv")
 text = "MAIN MENU"
+
+[node name="BestScoreResult" type="Label" parent="CompletionPanel/CompletionBox" unique_id=1863998858]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3k6gv")
+text = "Best Score"
+horizontal_alignment = 1
 
 [node name="Timer" type="Timer" parent="." unique_id=687062967]
 
@@ -95,6 +108,7 @@ offset_left = 520.0
 offset_top = 40.0
 offset_right = 656.0
 offset_bottom = 85.0
+theme_override_fonts/font = ExtResource("2_3k6gv")
 theme_override_font_sizes/font_size = 32
 text = "Time: 00"
 

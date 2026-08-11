@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ce23n2vkwojj8"]
 
 [ext_resource type="Script" uid="uid://cuhqe0qbqvncg" path="res://Scripts/BestScore.gd" id="1_gcg16"]
+[ext_resource type="FontFile" uid="uid://hx6nmxcfrndn" path="res://Assets/Font/Montserrat-ExtraBold.ttf" id="2_hvjec"]
 
 [node name="BestScore" type="Control" unique_id=1032419023]
 layout_mode = 3
@@ -27,14 +28,17 @@ offset_bottom = 85.0
 
 [node name="Title" type="Label" parent="ScoreContainer" unique_id=197916958]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hvjec")
 text = "BEST SCORE"
 
 [node name="BestScoreLabel" type="Label" parent="ScoreContainer" unique_id=1342276369]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hvjec")
 text = "Best Moves: --"
 
 [node name="BackButton" type="Button" parent="ScoreContainer" unique_id=1546879582]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hvjec")
 text = "BACK"
 
 [connection signal="pressed" from="ScoreContainer/BackButton" to="." method="_on_back_button_pressed"]
