@@ -183,7 +183,7 @@ func game_completed() -> void:
 	print("Moves: ", moves)
 	print("Time: ", time_label.text)
 
-	completion_result.text = "All 6 pairs matched!\nMoves: %d\nTime: %s" % [
+	completion_result.text = "All 6 pairs matched!\n\nMoves: %d\n\n%s" % [
 		moves,
 		time_label.text
 	]

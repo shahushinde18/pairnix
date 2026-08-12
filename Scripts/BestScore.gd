@@ -2,6 +2,7 @@ extends Control
 
 @onready var best_score_label: Label = $ScoreContainer/BestScoreLabel
 @onready var back_button: Button = $ScoreContainer/BackButton
+@onready var button_click_sound: AudioStreamPlayer = $ButtonClickSound
 
 
 func _ready() -> void:
@@ -25,23 +26,12 @@ func update_best_score() -> void:
 
 
 func _on_back_button_pressed() -> void:
+	button_click_sound.play()
+
 	print("BEST SCORE BACK BUTTON PRESSED")
+
+	await get_tree().create_timer(0.15).timeout
 
 	get_tree().change_scene_to_file(
 		"res://Scenes/MainMenu/MainMenu.tscn"
 	)
-
-
-func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			print("MOUSE CLICK: ", event.position)
-
-			if back_button.get_global_rect().has_point(event.position):
-				print("CLICK IS INSIDE BACK BUTTON")
-
-				get_viewport().set_input_as_handled()
-
-				get_tree().change_scene_to_file(
-					"res://Scenes/MainMenu/MainMenu.tscn"
-				)

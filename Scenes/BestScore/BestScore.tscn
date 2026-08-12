@@ -1,7 +1,33 @@
 [gd_scene format=3 uid="uid://ce23n2vkwojj8"]
 
 [ext_resource type="Script" uid="uid://cuhqe0qbqvncg" path="res://Scripts/BestScore.gd" id="1_gcg16"]
+[ext_resource type="Texture2D" uid="uid://bmpp5q1c8vtkw" path="res://Assets/Images/Backgrounds/main_menu_background.png" id="2_6ml01"]
 [ext_resource type="FontFile" uid="uid://hx6nmxcfrndn" path="res://Assets/Font/Montserrat-ExtraBold.ttf" id="2_hvjec"]
+[ext_resource type="AudioStream" uid="uid://died5acmah43i" path="res://Assets/Audio/button_click.mp3" id="4_urd1p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oerk1"]
+bg_color = Color(0.14117648, 0.0627451, 0.2901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8392157, 0.65882355, 0.30980393, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6agbc"]
+bg_color = Color(0.22745098, 0.101960786, 0.41960785, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9490196, 0.78039217, 0.36078432, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
 
 [node name="BestScore" type="Control" unique_id=1032419023]
 layout_mode = 3
@@ -12,33 +38,62 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gcg16")
 
-[node name="Background" type="ColorRect" parent="." unique_id=405372076]
+[node name="Background" type="TextureRect" parent="." unique_id=1780833023]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.28510448, 0.40252027, 0.30088264, 1)
+texture = ExtResource("2_6ml01")
+expand_mode = 1
 
 [node name="ScoreContainer" type="VBoxContainer" parent="." unique_id=1175195549]
-layout_mode = 0
-offset_right = 150.0
-offset_bottom = 85.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+alignment = 1
 
 [node name="Title" type="Label" parent="ScoreContainer" unique_id=197916958]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.9647059, 0.84313726, 0.47843137, 1)
+theme_override_colors/font_outline_color = Color(0.08627451, 0.043137256, 0.19607843, 1)
+theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_hvjec")
+theme_override_font_sizes/font_size = 32
 text = "BEST SCORE"
+horizontal_alignment = 1
 
 [node name="BestScoreLabel" type="Label" parent="ScoreContainer" unique_id=1342276369]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.9647059, 0.84313726, 0.47843137, 1)
+theme_override_colors/font_outline_color = Color(0.08627451, 0.043137256, 0.19607843, 1)
+theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("2_hvjec")
+theme_override_font_sizes/font_size = 24
 text = "Best Moves: --"
+horizontal_alignment = 1
 
 [node name="BackButton" type="Button" parent="ScoreContainer" unique_id=1546879582]
+custom_minimum_size = Vector2(300, 55)
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.9647059, 0.84313726, 0.47843137, 1)
+theme_override_colors/font_outline_color = Color(0.08627451, 0.043137256, 0.19607843, 1)
+theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("2_hvjec")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_oerk1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6agbc")
 text = "BACK"
+
+[node name="ButtonClickSound" type="AudioStreamPlayer" parent="." unique_id=1743860537]
+stream = ExtResource("4_urd1p")
 
 [connection signal="pressed" from="ScoreContainer/BackButton" to="." method="_on_back_button_pressed"]
