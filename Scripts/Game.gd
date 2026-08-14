@@ -27,6 +27,7 @@ const CARD_TEXTURES := [
 @onready var wrong_match_sound: AudioStreamPlayer = $WrongMatchSound
 @onready var game_complete_sound: AudioStreamPlayer = $GameCompleteSound
 @onready var best_score_result: Label = $CompletionPanel/CompletionBox/BestScoreResult
+@onready var pause_panel: Panel = $PausePanel
 
 var cards: Array[Control] = []
 
@@ -218,3 +219,53 @@ func _on_main_menu_pressed() -> void:
 func _on_game_timer_timeout() -> void:
 	elapsed_time += 1
 	update_time_label()
+
+
+func _on_pause_button_pressed() -> void:
+	button_click_sound.play()
+
+	game_timer.paused = true
+	input_locked = true
+	set_cards_enabled(false)
+
+	pause_panel.visible = true
+
+
+func _on_resume_button_pressed() -> void:
+	button_click_sound.play()
+
+	pause_panel.visible = false
+
+	game_timer.paused = false
+	input_locked = false
+	set_cards_enabled(true)
+
+
+func _on_pause_restart_pressed() -> void:
+	print("PAUSE RESTART BUTTON PRESSED")
+
+	button_click_sound.play()
+
+	await get_tree().create_timer(0.15).timeout
+
+	get_tree().reload_current_scene()
+
+
+func _on_pause_main_menu_pressed() -> void:
+	button_click_sound.play()
+
+	await get_tree().create_timer(0.15).timeout
+
+	get_tree().change_scene_to_file(
+		"res://Scenes/MainMenu/MainMenu.tscn"
+	)
+
+
+func _on_game_main_menu_pressed() -> void:
+	button_click_sound.play()
+
+	await get_tree().create_timer(0.15).timeout
+
+	get_tree().change_scene_to_file(
+		"res://Scenes/MainMenu/MainMenu.tscn"
+	)
