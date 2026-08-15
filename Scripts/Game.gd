@@ -130,7 +130,6 @@ func _on_card_pressed(card: Control) -> void:
 
 	# MATCH
 	if card_a.card_id == card_b.card_id:
-		print("MATCH FOUND - Pair ID: ", card_a.card_id)
 		
 		match_success_sound.play()
 		
@@ -139,8 +138,6 @@ func _on_card_pressed(card: Control) -> void:
 
 		matched_pairs += 1
 		update_labels()
-
-		print("MATCHED PAIRS: ", matched_pairs, " / ", TOTAL_PAIRS)
 
 		# Re-enable remaining unmatched cards.
 		input_locked = false
@@ -151,8 +148,6 @@ func _on_card_pressed(card: Control) -> void:
 
 	# NO MATCH
 	else:
-		print("NO MATCH - Pair IDs: ", card_a.card_id, " and ", card_b.card_id)
-		
 		# Keep both cards visible for 0.8 seconds.
 		await get_tree().create_timer(0.8).timeout
 
@@ -180,10 +175,6 @@ func game_completed() -> void:
 
 	SaveManager.save_best_score(moves)
 
-	print("PAIRNIX COMPLETE!")
-	print("Moves: ", moves)
-	print("Time: ", time_label.text)
-
 	completion_result.text = "All 6 pairs matched!\n\nMoves: %d\n\n%s" % [
 		moves,
 		time_label.text
@@ -207,8 +198,6 @@ func _on_play_again_pressed() -> void:
 
 func _on_main_menu_pressed() -> void:
 	button_click_sound.play()
-
-	print("MAIN MENU BUTTON PRESSED")
 
 	await get_tree().create_timer(0.15).timeout
 
@@ -242,7 +231,6 @@ func _on_resume_button_pressed() -> void:
 
 
 func _on_pause_restart_pressed() -> void:
-	print("PAUSE RESTART BUTTON PRESSED")
 
 	button_click_sound.play()
 

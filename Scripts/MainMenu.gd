@@ -14,8 +14,6 @@ func _ready() -> void:
 func _on_play_button_pressed() -> void:
 	button_click_sound.play()
 
-	print("PLAY BUTTON PRESSED")
-
 	await get_tree().create_timer(0.15).timeout
 
 	get_tree().change_scene_to_file(
@@ -25,8 +23,6 @@ func _on_play_button_pressed() -> void:
 
 func _on_best_score_button_pressed() -> void:
 	button_click_sound.play()
-
-	print("BEST SCORE BUTTON PRESSED")
 
 	await get_tree().create_timer(0.15).timeout
 
@@ -38,10 +34,16 @@ func _on_best_score_button_pressed() -> void:
 func _on_settings_button_pressed() -> void:
 	button_click_sound.play()
 
-	print("SETTINGS BUTTON PRESSED")
-
 	await get_tree().create_timer(0.15).timeout
 
 	get_tree().change_scene_to_file(
 		"res://Scenes/Settings/Settings.tscn"
 	)
+
+
+func _on_exit_button_pressed() -> void:
+	button_click_sound.play()
+	
+	await get_tree().create_timer(0.15).timeout
+	
+	get_tree().quit()

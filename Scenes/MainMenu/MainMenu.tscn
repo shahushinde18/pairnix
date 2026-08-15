@@ -138,5 +138,20 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_vapy7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ua038")
 text = "SETTINGS"
 
+[node name="ExitButton" type="Button" parent="MenuContainer/ButtonsContainer" unique_id=2090911784]
+custom_minimum_size = Vector2(320, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_fonts/font = ExtResource("2_sg7ab")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_kpx3y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vapy7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ua038")
+text = "EXIT"
+
 [node name="ButtonClickSound" type="AudioStreamPlayer" parent="." unique_id=1143778338]
 stream = ExtResource("2_c7oo3")
+
+[connection signal="pressed" from="MenuContainer/ButtonsContainer/ExitButton" to="." method="_on_exit_button_pressed"]

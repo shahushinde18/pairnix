@@ -6,7 +6,6 @@ extends Control
 
 
 func _ready() -> void:
-	print("BEST SCORE SCREEN READY")
 
 	back_button.mouse_filter = Control.MOUSE_FILTER_STOP
 	back_button.disabled = false
@@ -27,8 +26,6 @@ func update_best_score() -> void:
 
 func _on_back_button_pressed() -> void:
 	button_click_sound.play()
-
-	print("BEST SCORE BACK BUTTON PRESSED")
 
 	await get_tree().create_timer(0.15).timeout
 

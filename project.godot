@@ -8,12 +8,16 @@
 
 config_version=5
 
+[accessibility]
+
+general/minimum_display_time=2
+
 [application]
 
 config/name="PAIRNIX"
 run/main_scene="uid://b10hyv4uwtyfb"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://duay1bo80ev8e"
 
 [autoload]
 
@@ -26,6 +30,7 @@ window/size/viewport_width=720
 window/size/viewport_height=1280
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/handheld/orientation=1
 
 [physics]
 
@@ -36,3 +41,4 @@ window/stretch/aspect="expand"
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true

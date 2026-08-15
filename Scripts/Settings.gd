@@ -32,13 +32,11 @@ func _on_sound_check_button_pressed() -> void:
 
 	update_sound_button()
 
-	print("SOUND ENABLED: ", new_state)
 
 
 func _on_back_button_pressed() -> void:
 	button_click_sound.play()
 
-	print("SETTINGS BACK BUTTON PRESSED")
 
 	await get_tree().create_timer(0.15).timeout
 

@@ -6,8 +6,6 @@ const SAVE_PATH := "user://pairnix_save.cfg"
 func save_best_score(moves: int) -> void:
 	var current_best := get_best_score()
 
-	print("SAVE MANAGER - Current Best: ", current_best)
-	print("SAVE MANAGER - New Moves: ", moves)
 
 	if current_best == 0 or moves < current_best:
 		var config := ConfigFile.new()
@@ -31,10 +29,8 @@ func get_best_score() -> int:
 
 	if error == OK:
 		var best_moves = config.get_value("score", "best_moves", 0)
-		print("SAVE MANAGER - Loaded Best Score: ", best_moves)
 		return int(best_moves)
 
-	print("SAVE MANAGER - No saved score found.")
 	return 0
 
 

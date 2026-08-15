@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://dse3unswqlhse"]
 
-[ext_resource type="Script" uid="uid://gw0pwpd2rm5" path="res://Scripts/Game.gd" id="1_rdw05"]
-[ext_resource type="Texture2D" uid="uid://b0hs7vp3di5jn" path="res://Assets/Images/Backgrounds/game_background.png" id="2_1q8bt"]
-[ext_resource type="FontFile" uid="uid://hx6nmxcfrndn" path="res://Assets/Font/Montserrat-ExtraBold.ttf" id="2_3k6gv"]
-[ext_resource type="AudioStream" uid="uid://died5acmah43i" path="res://Assets/Audio/button_click.mp3" id="2_gwu2e"]
-[ext_resource type="AudioStream" uid="uid://jikdg0c85pcr" path="res://Assets/Audio/match_success.mp3" id="3_xbxml"]
-[ext_resource type="AudioStream" uid="uid://cjmyx7tyenkxi" path="res://Assets/Audio/wrong_match.mp3" id="4_ln2h6"]
-[ext_resource type="AudioStream" uid="uid://cq6oqerywpn" path="res://Assets/Audio/game_complete.mp3" id="5_y3kpf"]
+[ext_resource type="Script" uid="uid://gw0pwpd2rm5" path="res://Scripts/Game.gd" id="1_bt3xf"]
+[ext_resource type="Texture2D" uid="uid://b0hs7vp3di5jn" path="res://Assets/Images/Backgrounds/game_background.png" id="2_py1ek"]
+[ext_resource type="FontFile" uid="uid://hx6nmxcfrndn" path="res://Assets/Font/Montserrat-ExtraBold.ttf" id="3_4te7l"]
+[ext_resource type="AudioStream" uid="uid://died5acmah43i" path="res://Assets/Audio/button_click.mp3" id="4_wexht"]
+[ext_resource type="AudioStream" uid="uid://jikdg0c85pcr" path="res://Assets/Audio/match_success.mp3" id="5_dxi7s"]
+[ext_resource type="AudioStream" uid="uid://cjmyx7tyenkxi" path="res://Assets/Audio/wrong_match.mp3" id="6_ykh22"]
+[ext_resource type="AudioStream" uid="uid://cq6oqerywpn" path="res://Assets/Audio/game_complete.mp3" id="7_iyri2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1q8bt"]
 bg_color = Color(0.08627451, 0.043137256, 0.19607843, 0.33333334)
@@ -56,6 +56,46 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpx3y"]
+content_margin_left = 20.0
+content_margin_top = 12.0
+content_margin_right = 20.0
+content_margin_bottom = 12.0
+bg_color = Color(0.14117648, 0.08235294, 0.30980393, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8392157, 0.65882355, 0.30980393, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vapy7"]
+bg_color = Color(0.09019608, 0.050980393, 0.21176471, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7882353, 0.58431375, 0.20784314, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ua038"]
+bg_color = Color(0.23137255, 0.14117648, 0.45882353, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9411765, 0.78039217, 0.36862746, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m1o7v"]
 bg_color = Color(0.08627451, 0.043137256, 0.19607843, 0.23529412)
 
@@ -82,7 +122,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_rdw05")
+script = ExtResource("1_bt3xf")
 
 [node name="Background" type="TextureRect" parent="." unique_id=786891020]
 layout_mode = 1
@@ -92,36 +132,36 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("2_1q8bt")
+texture = ExtResource("2_py1ek")
 expand_mode = 1
 stretch_mode = 6
 
 [node name="HUDPanel" type="Panel" parent="." unique_id=336593698]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 15.0
+offset_top = 40.0
 offset_right = 710.0
-offset_bottom = 85.0
+offset_bottom = 110.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_1q8bt")
 
 [node name="CardGrid" type="GridContainer" parent="." unique_id=842722600]
 layout_mode = 1
 offset_left = 6.0
-offset_top = 220.0
+offset_top = 365.0
 offset_right = 714.0
-offset_bottom = 940.0
+offset_bottom = 1085.0
 columns = 4
 
 [node name="PairsLabel" type="Label" parent="." unique_id=1724544383]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 38.0
+offset_top = 60.0
 offset_right = 220.0
-offset_bottom = 78.0
+offset_bottom = 100.0
 theme_override_colors/font_color = Color(0.9647059, 0.84313726, 0.47843137, 1)
 theme_override_colors/font_outline_color = Color(0.08627451, 0.043137256, 0.19607843, 1)
 theme_override_constants/outline_size = 3
-theme_override_fonts/font = ExtResource("2_3k6gv")
+theme_override_fonts/font = ExtResource("3_4te7l")
 theme_override_font_sizes/font_size = 20
 text = "Pairs: 0 / 6"
 horizontal_alignment = 1
@@ -129,13 +169,13 @@ horizontal_alignment = 1
 [node name="MovesLabel" type="Label" parent="." unique_id=1208495764]
 layout_mode = 1
 offset_left = 260.0
-offset_top = 38.0
+offset_top = 60.0
 offset_right = 460.0
-offset_bottom = 78.0
+offset_bottom = 100.0
 theme_override_colors/font_color = Color(0.9098039, 0.8745098, 0.9607843, 1)
 theme_override_colors/font_outline_color = Color(0.08627451, 0.043137256, 0.19607843, 1)
 theme_override_constants/outline_size = 3
-theme_override_fonts/font = ExtResource("2_3k6gv")
+theme_override_fonts/font = ExtResource("3_4te7l")
 theme_override_font_sizes/font_size = 20
 text = "Moves: 0"
 horizontal_alignment = 1
@@ -146,10 +186,6 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 60.0
-offset_top = 350.0
-offset_right = -60.0
-offset_bottom = -405.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_hsneb")
@@ -168,14 +204,13 @@ offset_bottom = 207.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 12
-alignment = 1
 
 [node name="CompletionTitle" type="Label" parent="CompletionPanel/CompletionBox" unique_id=2115317724]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9647059, 0.84313726, 0.47843137, 1)
 theme_override_colors/font_outline_color = Color(0.08627451, 0.043137256, 0.19607843, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("2_3k6gv")
+theme_override_fonts/font = ExtResource("3_4te7l")
 theme_override_font_sizes/font_size = 32
 text = "WELL DONE!"
 horizontal_alignment = 1
@@ -185,19 +220,19 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.9098039, 0.8745098, 0.9607843, 1)
 theme_override_colors/font_outline_color = Color(0.08627451, 0.043137256, 0.19607843, 1)
 theme_override_constants/outline_size = 2
-theme_override_fonts/font = ExtResource("2_3k6gv")
+theme_override_fonts/font = ExtResource("3_4te7l")
 theme_override_font_sizes/font_size = 18
 text = "All 6 pairs matched!"
 horizontal_alignment = 1
 
 [node name="Spacer" type="Control" parent="CompletionPanel/CompletionBox" unique_id=1331630865]
-custom_minimum_size = Vector2(0, 30)
+custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 
 [node name="PlayAgainButton" type="Button" parent="CompletionPanel/CompletionBox" unique_id=462037652]
 custom_minimum_size = Vector2(260, 55)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_3k6gv")
+theme_override_fonts/font = ExtResource("3_4te7l")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_mjvk5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gvja8")
@@ -206,7 +241,7 @@ text = "PLAY AGAIN"
 [node name="MainMenuButton" type="Button" parent="CompletionPanel/CompletionBox" unique_id=15394914]
 custom_minimum_size = Vector2(260, 55)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_3k6gv")
+theme_override_fonts/font = ExtResource("3_4te7l")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_mjvk5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gvja8")
@@ -216,8 +251,10 @@ text = "MAIN MENU"
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9647059, 0.84313726, 0.47843137, 1)
 theme_override_colors/font_outline_color = Color(0.08627451, 0.043137256, 0.19607843, 1)
+theme_override_constants/line_spacing = 3
+theme_override_constants/shadow_offset_y = 1
 theme_override_constants/outline_size = 2
-theme_override_fonts/font = ExtResource("2_3k6gv")
+theme_override_fonts/font = ExtResource("3_4te7l")
 theme_override_font_sizes/font_size = 20
 text = "Best Score"
 horizontal_alignment = 1
@@ -227,50 +264,63 @@ horizontal_alignment = 1
 [node name="TimeLabel" type="Label" parent="." unique_id=278151360]
 layout_mode = 1
 offset_left = 500.0
-offset_top = 38.0
+offset_top = 60.0
 offset_right = 700.0
-offset_bottom = 78.0
+offset_bottom = 100.0
 theme_override_colors/font_color = Color(0.9098039, 0.8745098, 0.9607843, 1)
 theme_override_colors/font_outline_color = Color(0.08627451, 0.043137256, 0.19607843, 1)
 theme_override_constants/outline_size = 3
-theme_override_fonts/font = ExtResource("2_3k6gv")
+theme_override_fonts/font = ExtResource("3_4te7l")
 theme_override_font_sizes/font_size = 20
 text = "Time: 00"
 horizontal_alignment = 1
 
 [node name="ButtonClickSound" type="AudioStreamPlayer" parent="." unique_id=467281981]
-stream = ExtResource("2_gwu2e")
+stream = ExtResource("4_wexht")
 
 [node name="MatchSuccessSound" type="AudioStreamPlayer" parent="." unique_id=2108631396]
-stream = ExtResource("3_xbxml")
+stream = ExtResource("5_dxi7s")
 
 [node name="WrongMatchSound" type="AudioStreamPlayer" parent="." unique_id=603127107]
-stream = ExtResource("4_ln2h6")
+stream = ExtResource("6_ykh22")
 
 [node name="GameCompleteSound" type="AudioStreamPlayer" parent="." unique_id=561055710]
-stream = ExtResource("5_y3kpf")
+stream = ExtResource("7_iyri2")
 
 [node name="GameControlsContainer" type="HBoxContainer" parent="." unique_id=2135705824]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -112.0
-offset_top = 120.0
-offset_right = 112.0
-offset_bottom = 165.0
+offset_left = -159.0
+offset_top = 180.0
+offset_right = 159.0
+offset_bottom = 230.0
 grow_horizontal = 2
+theme_override_constants/separation = 38
 
 [node name="PauseButton" type="Button" parent="GameControlsContainer" unique_id=574417576]
 custom_minimum_size = Vector2(110, 45)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_3k6gv")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_fonts/font = ExtResource("3_4te7l")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_kpx3y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vapy7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ua038")
 text = "PAUSE"
 
 [node name="MainMenuButton" type="Button" parent="GameControlsContainer" unique_id=1655192698]
 custom_minimum_size = Vector2(110, 45)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_3k6gv")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_fonts/font = ExtResource("3_4te7l")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_kpx3y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vapy7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ua038")
 text = "MAIN MENU"
 
 [node name="PausePanel" type="Panel" parent="." unique_id=896736821]
@@ -284,27 +334,31 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_m1o7v")
 
 [node name="PauseDialog" type="PanelContainer" parent="PausePanel" unique_id=1628564522]
-custom_minimum_size = Vector2(300, 250)
+custom_minimum_size = Vector2(300, 258)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -149.0
+offset_right = 170.0
+offset_bottom = 167.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_3586x")
 
 [node name="PauseBox" type="VBoxContainer" parent="PausePanel/PauseDialog" unique_id=1723133796]
-custom_minimum_size = Vector2(220, 280)
+custom_minimum_size = Vector2(220, 258)
 layout_mode = 2
-theme_override_constants/separation = 12
+theme_override_constants/separation = 16
 
 [node name="PauseTitle" type="Label" parent="PausePanel/PauseDialog/PauseBox" unique_id=1555536188]
 custom_minimum_size = Vector2(220, 45)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9647059, 0.827451, 0.39607844, 1)
-theme_override_fonts/font = ExtResource("2_3k6gv")
+theme_override_fonts/font = ExtResource("3_4te7l")
 theme_override_font_sizes/font_size = 24
 text = "GAME PAUSED"
 horizontal_alignment = 1
@@ -313,20 +367,63 @@ vertical_alignment = 1
 [node name="ResumeButton" type="Button" parent="PausePanel/PauseDialog/PauseBox" unique_id=1661708512]
 custom_minimum_size = Vector2(220, 50)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_3k6gv")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_fonts/font = ExtResource("3_4te7l")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_kpx3y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vapy7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ua038")
 text = "RESUME"
 
 [node name="RestartButton" type="Button" parent="PausePanel/PauseDialog/PauseBox" unique_id=620650045]
 custom_minimum_size = Vector2(220, 50)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_3k6gv")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_fonts/font = ExtResource("3_4te7l")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_kpx3y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vapy7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ua038")
 text = "RESTART"
 
 [node name="MainMenuButton" type="Button" parent="PausePanel/PauseDialog/PauseBox" unique_id=1612865831]
 custom_minimum_size = Vector2(220, 50)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_3k6gv")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.9098039, 0.6392157, 1)
+theme_override_fonts/font = ExtResource("3_4te7l")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_kpx3y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vapy7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ua038")
 text = "MAIN MENU"
+
+[node name="BottomContentArea" type="PanelContainer" parent="." unique_id=605239983]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -80.0
+offset_right = -10.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1q8bt")
+
+[node name="HowToPlayLabel" type="Label" parent="BottomContentArea" unique_id=1078653610]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9647059, 0.84313726, 0.47843137, 1)
+theme_override_colors/font_outline_color = Color(0.08627451, 0.043137256, 0.19607843, 1)
+theme_override_fonts/font = ExtResource("3_4te7l")
+theme_override_font_sizes/font_size = 18
+text = "Match 2 Same Cards -> Complete All Pairs
+Fewer moves = Better Score"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="GameControlsContainer/PauseButton" to="." method="_on_pause_button_pressed"]
 [connection signal="pressed" from="GameControlsContainer/MainMenuButton" to="." method="_on_game_main_menu_pressed"]
