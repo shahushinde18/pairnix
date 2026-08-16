@@ -163,7 +163,7 @@ theme_override_colors/font_outline_color = Color(0.08627451, 0.043137256, 0.1960
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("3_4te7l")
 theme_override_font_sizes/font_size = 20
-text = "Pairs: 0 / 6"
+text = "Pairs: 0/6"
 horizontal_alignment = 1
 
 [node name="MovesLabel" type="Label" parent="." unique_id=1208495764]
@@ -212,7 +212,7 @@ theme_override_colors/font_outline_color = Color(0.08627451, 0.043137256, 0.1960
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("3_4te7l")
 theme_override_font_sizes/font_size = 32
-text = "WELL DONE!"
+text = "🎉 WELL DONE!"
 horizontal_alignment = 1
 
 [node name="CompletionResult" type="Label" parent="CompletionPanel/CompletionBox" unique_id=197187070]
@@ -236,7 +236,7 @@ theme_override_fonts/font = ExtResource("3_4te7l")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_mjvk5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gvja8")
-text = "PLAY AGAIN"
+text = "↻ PLAY AGAIN"
 
 [node name="MainMenuButton" type="Button" parent="CompletionPanel/CompletionBox" unique_id=15394914]
 custom_minimum_size = Vector2(260, 55)
@@ -245,7 +245,7 @@ theme_override_fonts/font = ExtResource("3_4te7l")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_mjvk5")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gvja8")
-text = "MAIN MENU"
+text = "⌂ MAIN MENU"
 
 [node name="BestScoreResult" type="Label" parent="CompletionPanel/CompletionBox" unique_id=1863998858]
 layout_mode = 2
@@ -256,7 +256,7 @@ theme_override_constants/shadow_offset_y = 1
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("3_4te7l")
 theme_override_font_sizes/font_size = 20
-text = "Best Score"
+text = "BEST SCORE"
 horizontal_alignment = 1
 
 [node name="Timer" type="Timer" parent="." unique_id=687062967]
@@ -272,7 +272,7 @@ theme_override_colors/font_outline_color = Color(0.08627451, 0.043137256, 0.1960
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("3_4te7l")
 theme_override_font_sizes/font_size = 20
-text = "Time: 00"
+text = "Time: 00:00"
 horizontal_alignment = 1
 
 [node name="ButtonClickSound" type="AudioStreamPlayer" parent="." unique_id=467281981]
@@ -293,9 +293,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -159.0
-offset_top = 180.0
+offset_top = 185.0
 offset_right = 159.0
-offset_bottom = 230.0
+offset_bottom = 235.0
 grow_horizontal = 2
 theme_override_constants/separation = 38
 
@@ -309,7 +309,7 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_kpx3y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vapy7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ua038")
-text = "PAUSE"
+text = "⏸ PAUSE"
 
 [node name="MainMenuButton" type="Button" parent="GameControlsContainer" unique_id=1655192698]
 custom_minimum_size = Vector2(110, 45)
@@ -321,7 +321,7 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_kpx3y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vapy7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ua038")
-text = "MAIN MENU"
+text = "⌂ MAIN MENU"
 
 [node name="PausePanel" type="Panel" parent="." unique_id=896736821]
 visible = false
@@ -360,7 +360,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.9647059, 0.827451, 0.39607844, 1)
 theme_override_fonts/font = ExtResource("3_4te7l")
 theme_override_font_sizes/font_size = 24
-text = "GAME PAUSED"
+text = "⏸ GAME PAUSED"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -374,7 +374,7 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_kpx3y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vapy7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ua038")
-text = "RESUME"
+text = "▶ RESUME"
 
 [node name="RestartButton" type="Button" parent="PausePanel/PauseDialog/PauseBox" unique_id=620650045]
 custom_minimum_size = Vector2(220, 50)
@@ -386,7 +386,7 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_kpx3y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vapy7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ua038")
-text = "RESTART"
+text = "↻ RESTART"
 
 [node name="MainMenuButton" type="Button" parent="PausePanel/PauseDialog/PauseBox" unique_id=1612865831]
 custom_minimum_size = Vector2(220, 50)
@@ -398,7 +398,7 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_kpx3y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vapy7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ua038")
-text = "MAIN MENU"
+text = "⌂ MAIN MENU"
 
 [node name="BottomContentArea" type="PanelContainer" parent="." unique_id=605239983]
 layout_mode = 1
@@ -420,7 +420,7 @@ theme_override_colors/font_color = Color(0.9647059, 0.84313726, 0.47843137, 1)
 theme_override_colors/font_outline_color = Color(0.08627451, 0.043137256, 0.19607843, 1)
 theme_override_fonts/font = ExtResource("3_4te7l")
 theme_override_font_sizes/font_size = 18
-text = "Match 2 Same Cards -> Complete All Pairs
+text = "Match 2 Same Cards • Complete All Pairs
 Fewer moves = Better Score"
 horizontal_alignment = 1
 vertical_alignment = 1

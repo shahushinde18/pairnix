@@ -110,7 +110,7 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_kpx3y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vapy7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ua038")
-text = "PLAY"
+text = "▶ PLAY"
 
 [node name="BestScoreButton" type="Button" parent="MenuContainer/ButtonsContainer" unique_id=1176568855]
 custom_minimum_size = Vector2(320, 70)
@@ -123,7 +123,7 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_kpx3y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vapy7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ua038")
-text = "BEST SCORE"
+text = "🏆 BEST SCORE"
 
 [node name="SettingsButton" type="Button" parent="MenuContainer/ButtonsContainer" unique_id=737396398]
 custom_minimum_size = Vector2(320, 70)
@@ -136,7 +136,7 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_kpx3y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vapy7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ua038")
-text = "SETTINGS"
+text = "⚙ SETTINGS"
 
 [node name="ExitButton" type="Button" parent="MenuContainer/ButtonsContainer" unique_id=2090911784]
 custom_minimum_size = Vector2(320, 70)
@@ -149,7 +149,7 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_kpx3y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vapy7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ua038")
-text = "EXIT"
+text = "⏻ EXIT"
 
 [node name="ButtonClickSound" type="AudioStreamPlayer" parent="." unique_id=1143778338]
 stream = ExtResource("2_c7oo3")

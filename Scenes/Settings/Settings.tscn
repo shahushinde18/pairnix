@@ -95,7 +95,7 @@ theme_override_colors/font_outline_color = Color(0.08627451, 0.043137256, 0.1960
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_swut7")
 theme_override_font_sizes/font_size = 32
-text = "SETTINGS"
+text = "⚙ SETTINGS"
 horizontal_alignment = 1
 
 [node name="SoundLabel" type="Label" parent="SettingsContainer" unique_id=1550270353]
@@ -105,10 +105,33 @@ theme_override_colors/font_outline_color = Color(0.08627451, 0.043137256, 0.1960
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("2_swut7")
 theme_override_font_sizes/font_size = 22
-text = "Sound"
+text = "🔊 SOUND"
 horizontal_alignment = 1
 
 [node name="SoundCheckButton" type="Button" parent="SettingsContainer" unique_id=1695306699]
+custom_minimum_size = Vector2(300, 55)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.9647059, 0.84313726, 0.47843137, 1)
+theme_override_colors/font_outline_color = Color(0.08627451, 0.043137256, 0.19607843, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_swut7")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_q5ip6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gl5ki")
+text = "ON"
+
+[node name="MusicLabel" type="Label" parent="SettingsContainer" unique_id=1343624003]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9098039, 0.8745098, 0.9607843, 1)
+theme_override_colors/font_outline_color = Color(0.08627451, 0.043137256, 0.19607843, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_swut7")
+theme_override_font_sizes/font_size = 22
+text = "🔊 MUSIC"
+horizontal_alignment = 1
+
+[node name="MusicCheckButton" type="Button" parent="SettingsContainer" unique_id=482755990]
 custom_minimum_size = Vector2(300, 55)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -132,7 +155,7 @@ theme_override_fonts/font = ExtResource("2_swut7")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_oerk1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_6agbc")
-text = "BACK"
+text = "← BACK"
 
 [node name="ButtonClickSound" type="AudioStreamPlayer" parent="." unique_id=1923415921]
 stream = ExtResource("2_xlpa8")

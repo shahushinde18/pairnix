@@ -12,7 +12,6 @@ func _ready() -> void:
 
 	update_best_score()
 
-	back_button.pressed.connect(_on_back_button_pressed)
 
 
 func update_best_score() -> void:

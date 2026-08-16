@@ -169,6 +169,9 @@ func game_completed() -> void:
 
 	input_locked = true
 	set_cards_enabled(false)
+	
+	$GameControlsContainer/PauseButton.disabled = true
+	$GameControlsContainer/MainMenuButton.disabled = true
 
 	var previous_best := SaveManager.get_best_score()
 	var is_new_best := previous_best == 0 or moves < previous_best
