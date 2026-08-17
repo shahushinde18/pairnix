@@ -277,15 +277,19 @@ horizontal_alignment = 1
 
 [node name="ButtonClickSound" type="AudioStreamPlayer" parent="." unique_id=467281981]
 stream = ExtResource("4_wexht")
+bus = &"SFX"
 
 [node name="MatchSuccessSound" type="AudioStreamPlayer" parent="." unique_id=2108631396]
 stream = ExtResource("5_dxi7s")
+bus = &"SFX"
 
 [node name="WrongMatchSound" type="AudioStreamPlayer" parent="." unique_id=603127107]
 stream = ExtResource("6_ykh22")
+bus = &"SFX"
 
 [node name="GameCompleteSound" type="AudioStreamPlayer" parent="." unique_id=561055710]
 stream = ExtResource("7_iyri2")
+bus = &"SFX"
 
 [node name="GameControlsContainer" type="HBoxContainer" parent="." unique_id=2135705824]
 layout_mode = 1

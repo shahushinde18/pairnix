@@ -14,6 +14,7 @@ func _ready() -> void:
 	add_child(music_player)
 
 	music_player.stream = preload("res://Assets/Audio/background_music.mp3")
+	music_player.bus = "Music"
 	music_player.finished.connect(_on_music_finished)
 
 	update_audio()
@@ -39,12 +40,12 @@ func set_music_enabled(enabled: bool) -> void:
 
 
 func update_audio() -> void:
-	var master_bus := AudioServer.get_bus_index("Master")
+	var sfx_bus := AudioServer.get_bus_index("SFX")
 
-	if master_bus == -1:
+	if sfx_bus == -1:
 		return
 
-	AudioServer.set_bus_mute(master_bus, not sound_enabled)
+	AudioServer.set_bus_mute(sfx_bus, not sound_enabled)
 
 
 func play_music() -> void:

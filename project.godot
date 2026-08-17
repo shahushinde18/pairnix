@@ -15,9 +15,15 @@ general/minimum_display_time=2
 [application]
 
 config/name="PAIRNIX"
+config/description="PAIRNIX is a fun memory matching game where you match identical cards, complete all pairs, and try to achieve your best score."
+config/version="1.0"
 run/main_scene="uid://b10hyv4uwtyfb"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="uid://duay1bo80ev8e"
+
+[audio]
+
+buses/default_bus_layout="uid://bcrdr5ih8wveo"
 
 [autoload]
 
