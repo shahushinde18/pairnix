@@ -153,5 +153,6 @@ text = "⏻ EXIT"
 
 [node name="ButtonClickSound" type="AudioStreamPlayer" parent="." unique_id=1143778338]
 stream = ExtResource("2_c7oo3")
+bus = &"SFX"
 
 [connection signal="pressed" from="MenuContainer/ButtonsContainer/ExitButton" to="." method="_on_exit_button_pressed"]

@@ -95,5 +95,6 @@ text = "← BACK"
 
 [node name="ButtonClickSound" type="AudioStreamPlayer" parent="." unique_id=1743860537]
 stream = ExtResource("4_urd1p")
+bus = &"SFX"
 
 [connection signal="pressed" from="ScoreContainer/BackButton" to="." method="_on_back_button_pressed"]

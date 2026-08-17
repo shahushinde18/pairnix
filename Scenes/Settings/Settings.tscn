@@ -159,3 +159,4 @@ text = "← BACK"
 
 [node name="ButtonClickSound" type="AudioStreamPlayer" parent="." unique_id=1923415921]
 stream = ExtResource("2_xlpa8")
+bus = &"SFX"
