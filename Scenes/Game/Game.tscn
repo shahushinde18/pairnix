@@ -232,6 +232,7 @@ layout_mode = 2
 [node name="PlayAgainButton" type="Button" parent="CompletionPanel/CompletionBox" unique_id=462037652]
 custom_minimum_size = Vector2(260, 55)
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("3_4te7l")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_mjvk5")
@@ -241,6 +242,7 @@ text = "↻ PLAY AGAIN"
 [node name="MainMenuButton" type="Button" parent="CompletionPanel/CompletionBox" unique_id=15394914]
 custom_minimum_size = Vector2(260, 55)
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("3_4te7l")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_mjvk5")
