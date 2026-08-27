@@ -11,5 +11,12 @@
 # OS files
 Thumbs.db
 .DS_Store
+*.tmp
+
+# Ignore everything inside Builds
+Builds/*
+
+# But keep the .gitkeep file so the folder exists on Github
+!Builds/.gitkeep
 
 
