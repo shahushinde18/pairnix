@@ -6,6 +6,7 @@ extends Control
 @onready var button_click_sound: AudioStreamPlayer = $ButtonClickSound
 
 func _ready() -> void:
+	AdManager.show_banner()
 	play_button.pressed.connect(_on_play_button_pressed)
 	best_score_button.pressed.connect(_on_best_score_button_pressed)
 	settings_button.pressed.connect(_on_settings_button_pressed)

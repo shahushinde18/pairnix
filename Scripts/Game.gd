@@ -41,6 +41,9 @@ var elapsed_time := 0
 
 
 func _ready() -> void:
+	# Show adaptive banner at the bottom
+	AdManager.show_banner()
+
 	completion_panel.visible = false
 
 	play_again_button.pressed.connect(_on_play_again_pressed)
@@ -189,6 +192,9 @@ func game_completed() -> void:
 		best_score_result.text = "Best Moves: %d" % SaveManager.get_best_score()
 
 	completion_panel.visible = true
+
+	# Show full-screen interstitial ad on completion
+	AdManager.show_interstitial()
 
 
 func _on_play_again_pressed() -> void:

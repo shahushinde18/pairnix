@@ -149,7 +149,7 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_kpx3y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vapy7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ua038")
-text = "⏻ EXIT"
+text = "❌ EXIT"
 
 [node name="ButtonClickSound" type="AudioStreamPlayer" parent="." unique_id=1143778338]
 stream = ExtResource("2_c7oo3")

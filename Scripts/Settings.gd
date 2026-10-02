@@ -7,6 +7,7 @@ extends Control
 
 
 func _ready() -> void:
+	AdManager.show_banner()
 	sound_check_button.pressed.connect(_on_sound_check_button_pressed)
 	music_check_button.pressed.connect(_on_music_check_button_pressed)
 	back_button.pressed.connect(_on_back_button_pressed)

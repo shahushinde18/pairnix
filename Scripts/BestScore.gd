@@ -6,7 +6,7 @@ extends Control
 
 
 func _ready() -> void:
-
+	AdManager.show_banner() # <--- Loads and keeps banner active across all scenes
 	back_button.mouse_filter = Control.MOUSE_FILTER_STOP
 	back_button.disabled = false
 

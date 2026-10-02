@@ -327,7 +327,7 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_kpx3y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vapy7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ua038")
-text = "⌂ MAIN MENU"
+text = "↩ MAIN MENU"
 
 [node name="PausePanel" type="Panel" parent="." unique_id=896736821]
 visible = false
@@ -413,9 +413,9 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 10.0
-offset_top = -80.0
+offset_top = -180.0
 offset_right = -10.0
-offset_bottom = -20.0
+offset_bottom = -120.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_1q8bt")
